@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container{
+      margin: 20px auto;
+      padding: 8px;
+      width: 500px;
+      border: 1px solid #cccccc;
+    }
+    .container div{
+      width: 100%;
+    }
+    .container div input{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <div>
+        日历一: <input type="calendar" id="inp" name="date1" />
+      </div>
+      <div>
+        日历二: <input type="calendar" name="date2" />
+      </div>
+      <div>
+        日历三: <input type="calendar" name="date3" />
+      </div>
+      <div>
+        日历四: <input type="date" />
+      </div>
+      <div>
+        姓名: <input type="text" />
+      </div>
+      <div>
+        邮箱: <input type="email" />
+      </div>
+      <div>
+        <input list="list1" type="text"></input>
+        <datalist id="list1">
+          <option>hhh</option>
+          <option>aaa</option>
+          <option>ggg</option>
+        </datalist>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="./utils.js"></script>
+<script src="./calendar.js"></script>
+<script>
+  var inp = document.getElementById('inp')
+  inp.calendar.setDate({
+    type: 'zh:',
+    defaultDate: '2015-10-10'
+  })
+</script>
+</html>
